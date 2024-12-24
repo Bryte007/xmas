@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-size: cover;
+    color: white;
+  }
+  
+  .container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .greeting {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .message {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+  
+  .snowflakes {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  
+  .snowflake {
+    font-size: 2.5em;
+    animation: snow 7s infinite;
+  }
+  
+  .snowflake:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .snowflake:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .snowflake:nth-child(3) {
+    animation-delay: 2s;
+  }
+  
+  .snowflake:nth-child(4) {
+    animation-delay: 3s;
+  }
+  
+  @keyframes snow {
+    0% {
+      top: -10%;
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+  
+  .animate-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: white;
+    color: #ee0979;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .animate-btn:hover {
+    background-color: #ee0979;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  #surprise-message {
+    font-size: 1.3em;
+    margin-top: 20px;
+    color: #ffcc00;
+    font-style: italic;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  @media (max-width: 600px) {
+    .greeting {
+      font-size: 3em;
+    }
+  
+    .message {
+      font-size: 1.2em;
+    }
+  
+    .animate-btn {
+      padding: 12px 25px;
+      font-size: 1em;
+    }
+  
+    #surprise-message {
+      font-size: 1.1em;
+    }
+  }
+  
